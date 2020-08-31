@@ -61,6 +61,11 @@ function reducer(state = initialState, action) {
         case CHANGE_TEXT:
             return{
                 ...state,
+                text: action.text
+            };
+        case ADD_TO_LIST:
+            return{
+                ...state,
                 list: state.list.concat(action.item)
             };
         default:
